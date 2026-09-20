@@ -21,7 +21,7 @@
 	* 테스트 통과 여부 확인
 	* 문제 없으면 배포까지 모두 자동
 
-##MLOps (Machine Learning + Operations)
+## MLOps (Machine Learning + Operations)
 * **AI 시대가 되며**
 	* 일반 프러그래밍: Code -> Build -> Deploy
 	* 머신 러닝: Data + Code + Model 세가지 관리
