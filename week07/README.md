@@ -1,4 +1,4 @@
-# week07 Doker Compose
+# week07 Docker Compose
 
 ## 1. docker compose ps 결과
 ![컨테이너 상태](images/devops1.png)
