@@ -1,5 +1,26 @@
 # Devops
 
+## 한학기 내용
+1주차 - 오리엔테이션
+2주차 - 한경세팅, 리눅스 기초 명령어, 파일 시스템
+3주차 - 셀스크립팅, git 협업
+4주차 - 네트워크 기초
+5주차 - 컨테이너, Docker
+6주차 - Dockerfile, 이미지 빌드
+7주차 - Docker Compose, 초반 정리
+8주차 - 중간종합평가
+9주차 - k8s 개요, 배포/프로젝트 주제 발표
+10주차 - Pod, Deployment, Service
+11주차 - ConfigMap, Secret, 헬스체크
+12주차 - CI - GitHub Actions
+13주차 - CD (GitOps), 모니터링
+14주차 - 프로젝트 발표 및 총정리
+15주차 - 기밀종합 평가
+
+
+
+
+
 ## DevOps란? (Development + Operations)
 * **개발(Dev)**: 프로그램 개발 (새로운 기능, 빠른 변경, 코드 작성)
 * **운영(Ops)**: 서버 운영 및 서비스 유지 (안정적인 서비스, 장애 방지)
