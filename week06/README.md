@@ -45,3 +45,45 @@ Docker file - ENV APP_TITLE="실행 설정"
 * RUN / COPY: 파일시스템 변경
 * CMD / ENV / EXPOSE / USER 등: 이미지 설정 (메타데이터 생성)
 - 한 레이어가 바뀌면, 그 아래 레이어는 전부 다시 생성
+
+requirements.txt 먼저 복사하는 이유
+: 자주 바뀌는 것을 뒤에 두변 빌드가 짧아진다.
+캐시 활용하면 재빌드 시간 크게 줄일 수 있음
+-> 순서 하나가 팀 전체의 속도 바꿈
+
+
+
+
+## 실습
+방명록 받고 실행
+docker pull ghcr.io/makyraen/inhatc-devops-guestbook:v1
+docker run -d -p 8080:5000 --name demo ghcr.io/makyraen/inhatc-devops-guestbook:v1
+
+삭제 후, 환경 변수만 바꿔서 다시 실행
+```
+docker run -d -p 8080:5000 --name demo \
+-e APP_TITLE="<본인 이름>의 방명록" \
+-e THEME_COLOR="#16a34a" \
+ghcr.io/makyraen/inhatc-devops-guestbook:v1
+```
+docker logs demo -> 시작로그 확인
+
+--> 이미지(붕어빵 틀)는 그대로, 설정만 바깥에서 주입
+
+
+좋지 않은 Dockerfile
+```
+COPY . .
+RUN pip install -r requirements.txt
+CMD ["python", "app.py"]
+```
+좋은 Dockerfile
+```
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+COPY . .
+CMD ["python", "app.py"]
+```
+
+배포 흐름
+build → tag → push → (친구) pull → run
