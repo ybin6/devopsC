@@ -29,7 +29,8 @@ Redis를 중지하자 guestbook의 READY가 0/1로 변경됨
 
 ## 4. liveness 실패 실험
 
-![RESTARTS 증가](images/liveness_fail.png)
+![liveness](images/liveness 실패.png)
+![liveness](images/liveness 실패-2.png)
 
 livenessProbe의 경로를 잘못 설정하니 검사가 실패해
 컨테이너가 재시작되고 RESTARTS가 증가함
