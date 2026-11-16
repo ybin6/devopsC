@@ -22,7 +22,7 @@ ConfigMap에서 제목과 색상을 변경하고 Deployment를
 
 ![Redis 중지](<images/readiness 실패.png>)
 
-![READY 0/1 확인](<images/readiness 실패-2.png>)
+![READY 0/1 확인](images/readiness-final.png)
 
 Redis를 중지하자 guestbook의 READY가 0/1로 변경됨
 앱은 실행 중이지만 요청을 받을 준비가 되지 않은 상태
